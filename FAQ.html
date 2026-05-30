@@ -85,6 +85,43 @@
 		background-color: #eaf5eb;
 	}
 
+	@media (max-width: 850px) {
+		label[for="menu-toggle"] {
+			display: block;
+		}
+		
+		ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 30px;
+			flex-direction: column;
+			align-items: stretch;
+			border-radius: 12px;
+			padding: 10px 0;
+			width: 220px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			border: 1px solid #d0ded1;
+			background-color: #ffffff;
+			z-index: 1000;
+		}
+		
+		#menu-toggle:checked ~ ul {
+			display: flex;
+		}
+		
+		ul li {
+			margin: 0;
+		}
+		
+		ul li a {
+			padding: 12px 20px;
+			border-radius: 0;
+			white-space: nowrap;
+			display: block;
+		}
+	}
+
 	main {
 		max-width: 800px;
 		margin: 0 auto;
